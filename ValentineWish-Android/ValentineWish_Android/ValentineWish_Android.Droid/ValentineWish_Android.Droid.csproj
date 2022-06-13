@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{48EC1F1F-2994-427A-A670-20F69B6F6817}</ProjectGuid>
+        <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+        <OutputType>Library</OutputType>
+        <RootNamespace>ValentineWish_Android.Droid</RootNamespace>
+        <AssemblyName>ValentineWish_Android.Droid</AssemblyName>
+        <AndroidApplication>True</AndroidApplication>
+        <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+        <AndroidResgenClass>Resource</AndroidResgenClass>
+        <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+        <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+        <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+        <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
+        <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
+        <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
+        <LangVersion>latest</LangVersion>
+        <Nullable>disable</Nullable>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>portable</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug</OutputPath>
+        <DefineConstants>DEBUG;</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <AndroidLinkMode>None</AndroidLinkMode>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release</OutputPath>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+        <AndroidManagedSymbols>true</AndroidManagedSymbols>
+        <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="Mono.Android" />
+        <Reference Include="System" />
+        <Reference Include="System.Core" />
+        <Reference Include="System.Xml.Linq" />
+        <Reference Include="System.Xml" />
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Xamarin.Forms" Version="4.8.0.1821" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="MainActivity.cs" />
+        <Compile Include="Resources\Resource.Designer.cs" />
+        <Compile Include="Properties\AssemblyInfo.cs" />
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="Resources\AboutResources.txt" />
+        <None Include="Assets\AboutAssets.txt" />
+        <None Include="Properties\AndroidManifest.xml" />
+    </ItemGroup>
+    <ItemGroup>
+        <AndroidResource Include="Resources\drawable-anydpi-v26\ic_launcher.xml" />
+        <AndroidResource Include="Resources\drawable-hdpi\ic_launcher.png" />
+        <AndroidResource Include="Resources\drawable-hdpi\ic_launcher_adaptive_back.png" />
+        <AndroidResource Include="Resources\drawable-hdpi\ic_launcher_adaptive_fore.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\ic_launcher.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\ic_launcher_adaptive_back.png" />
+        <AndroidResource Include="Resources\drawable-mdpi\ic_launcher_adaptive_fore.png" />
+        <AndroidResource Include="Resources\drawable-xhdpi\ic_launcher.png" />
+        <AndroidResource Include="Resources\drawable-xhdpi\ic_launcher_adaptive_back.png" />
+        <AndroidResource Include="Resources\drawable-xhdpi\ic_launcher_adaptive_fore.png" />
+        <AndroidResource Include="Resources\drawable-xxhdpi\ic_launcher.png" />
+        <AndroidResource Include="Resources\drawable-xxhdpi\ic_launcher_adaptive_back.png" />
+        <AndroidResource Include="Resources\drawable-xxhdpi\ic_launcher_adaptive_fore.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\ic_launcher.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\ic_launcher_adaptive_back.png" />
+        <AndroidResource Include="Resources\drawable-xxxhdpi\ic_launcher_adaptive_fore.png" />
+        <AndroidResource Include="Resources\values\styles.xml" />
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\ValentineWish_Android\ValentineWish_Android.csproj">
+            <Project>{71C4524C-3A0D-4D10-9CD0-1A968BAFC3E0}</Project>
+            <Name>ValentineWish_Android</Name>
+        </ProjectReference>
+    </ItemGroup>
+    <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+</Project>
